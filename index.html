@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приложение «Заметки»</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="navbar">
+          <p class="navbar__logo">Заме<span class="navbar__logo-span">тки</span></p>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="notes-app">
+        <div class="container">
+          <div class="notes-app__wrapper">
+            <div class="note-app">
+              <h1 class="note-app__title">Мои заметки</h1>
+              <div class="note-app__control">
+                <div class="note-app__filter-wrapper">
+                  <select class="note-app-filter">
+                    <option class="note-app-filter__elem" value="Все">Все</option>
+                    <option class="note-app-filter__elem" value="Активные">Активные</option>
+                    <option class="note-app-filter__elem" value="Выполнные">Выполнные</option>
+                  </select>
+                </div>
+                <form action="#" class="note-app__forma note-app__forma--create">
+                  <input
+                    type="text"
+                    name="noteText"
+                    placeholder="Введите текст"
+                    class="note-app__input note-app__input--create" />
+                  <button class="note-app__button note-app__button--create" type="submit">Создать заметку</button>
+                </form>
+              </div>
+              <ul class="note-app__list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

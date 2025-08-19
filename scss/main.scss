@@ -1,0 +1,115 @@
+@import './blocks/./_index.scss';
+
+// @font-face {
+//   font-family: 'Inter';
+//   src: url('../fonts/Inter-Regular.woff2') format('woff2');
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Inter';
+//   src: url('../fonts/Inter-Bold.woff2') format('woff2');
+//   font-weight: 700;
+//   font-style: normal;
+//   font-display: swap;
+// }
+@font-face {
+  font-family: 'ComicRelief';
+  src: url('../fonts/ComicRelief.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  // *base styles
+  --main-font: 'ComicRelief', sans-serif;
+  --width-container: 1170px;
+  --padding-container: 15px;
+
+  // *main colors
+  --main-color: #ffffff;
+  --accent-color: #8000ff;
+  --bg-body: #0d0d0d;
+
+  // *states
+  --default-color-ui-elements: #8000ff;
+  --hover-color-ui-elements: #b784ffc2;
+  --active-color-ui-elements: #614685c2;
+  --focus-ui-elements: 2px solid #ffffff;
+  --done-note-color: #cdcdcd;
+  --error-color: #ff0000;
+
+  // *header
+  --bg-header: rgba(22, 22, 22, 1);
+  --shadow-header: 4px 2px 8px rgba(0, 0, 0, 0.2);
+
+  // * notes app
+  --bg-notes-app: #161616;
+  --paper-main-color: #26232a;
+  --paper-secondary-color: #453f4c;
+  --shadow-note: 2px 7px 3px rgba(163, 59, 253, 0.2);
+  --size-triangle: 60px;
+  --color-triangle: #5b5365;
+
+  // *footer
+  --bg-footer: #161616;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  color: var(--main-color);
+  background-color: var(--bg-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.none {
+  display: none;
+}
+.main {
+  flex: 1 1 auto;
+}
+.container {
+  max-width: calc(var(--width-container) + var(--padding-container) * 2);
+  margin: 0 auto;
+  padding-inline: var(--padding-container);
+}
+
+// *media
+
+@media (max-width: 780px) {
+  // * notes app
+  .note-app__forma {
+    flex-wrap: wrap;
+  }
+  .notes__button {
+    width: 100%;
+  }
+}
+@media (max-width: 490px) {
+  // * notes app
+  .notes-list__wrapper {
+    padding: 20px 10px 15px;
+  }
+  .notes__input {
+    padding-left: 10px;
+  }
+  .note__main {
+    gap: 20px;
+  }
+  .notes__item {
+    padding: 0 5px;
+  }
+  .note__btns {
+    column-gap: 5px;
+  }
+  .note__btn {
+    padding: 5px;
+  }
+}

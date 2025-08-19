@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background-color: var(--bg-header);
+  box-shadow: var(--shadow-header);
+}
+.navbar {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-size: clamp(20px, 8vw, 30px);
+  color: var(--main-color);
+  .navbar__logo-span {
+    color: var(--accent-color);
+  }
+}
