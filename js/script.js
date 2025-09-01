@@ -3,7 +3,7 @@ const noteFilter = document.querySelector('.note-app-filter')
 const forma = document.querySelector('.note-app__forma--create')
 const noteInput = document.querySelector('.note-app__input--create')
 const noteList = document.querySelector('.note-app__list')
-const API_URL = 'https://689336d1c49d24bce869dec5.mockapi.io/notes'
+const API_URL = 'https://689336d1c49d24bce869dec5.mockapi.io/Users/1/Notes'
 let notes = []
 function renderNote() {
   noteList.innerHTML = ''
@@ -301,3 +301,4 @@ noteFilter.addEventListener('change', () => {
     })
   }
 })
+
